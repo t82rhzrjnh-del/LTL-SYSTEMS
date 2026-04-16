@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 const fireLifeSafetyServices = [
@@ -62,6 +65,8 @@ const navSections = [
 ];
 
 export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-0 md:px-8">
@@ -98,16 +103,36 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
         <a className="btn btn--sm hidden md:inline-flex" href="/#contact">
           Enquire Now
         </a>
+
+        {/* Mobile hamburger */}
+        <button
+          className="mobile-hamburger md:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className={`ham-bar${open ? " ham-bar--open" : ""}`} />
+        </button>
       </div>
 
-      {/* Mobile quick-nav */}
-      <nav className="mobile-quick-nav md:hidden" aria-label="Mobile quick navigation">
-        {navSections.map((section) => (
-          <a key={section.label} href={section.href} className="mobile-quick-nav__link">
-            {section.label}
+      {/* Mobile drawer */}
+      {open && (
+        <nav className="mobile-drawer" aria-label="Mobile navigation">
+          {navSections.map((section) => (
+            <a
+              key={section.label}
+              href={section.href}
+              className="mobile-drawer__link"
+              onClick={() => setOpen(false)}
+            >
+              {section.label}
+            </a>
+          ))}
+          <a className="btn mobile-drawer__cta" href="/#contact" onClick={() => setOpen(false)}>
+            Enquire Now
           </a>
-        ))}
-      </nav>
+        </nav>
+      )}
     </header>
   );
 }
