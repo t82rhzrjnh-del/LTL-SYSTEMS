@@ -33,34 +33,13 @@ const fireLifeSafetyServices = [
 ];
 
 const lifeSafetySystemsLinks = [
-  {
-    title: "Fire Alarm Systems",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/fire-alarm-systems/",
-  },
-  {
-    title: "Smoke Ventilation Systems",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/mechanical-natural-smoke-ventilation-systems/",
-  },
-  {
-    title: "Emergency Voice Communications Systems",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/emergency-voice-communications-systems/",
-  },
-  {
-    title: "Voice Alarm & Public Address Systems",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/voice-alarm-public-address-systems/",
-  },
-  {
-    title: "Suppression Systems",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/suppression-systems-fire-extinguishers/",
-  },
-  {
-    title: "Smoke & Fire Dampers",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/smoke-and-fire-dampers/",
-  },
-  {
-    title: "Fire Extinguishers",
-    href: "https://www.ltlsystems.co.uk/services/life-safety-systems/suppression-systems-fire-extinguishers/",
-  },
+  "Fire Alarm Systems",
+  "Smoke Ventilation Systems",
+  "Emergency Voice Communications Systems",
+  "Voice Alarm & Public Address Systems",
+  "Suppression Systems",
+  "Smoke & Fire Dampers",
+  "Fire Extinguishers",
 ];
 
 const electronicSecurityServices = [
@@ -281,11 +260,7 @@ export default function Home() {
             <p>Detailed service coverage from our dedicated Fire & Life Safety Systems portfolio:</p>
             <ul>
               {lifeSafetySystemsLinks.map((service) => (
-                <li key={service.title}>
-                  <a href={service.href} target="_blank" rel="noopener noreferrer">
-                    {service.title}
-                  </a>
-                </li>
+                <li key={service}>{service}</li>
               ))}
             </ul>
           </article>
