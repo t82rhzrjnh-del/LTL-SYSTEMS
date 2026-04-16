@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main id="top" className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-5 py-10 md:gap-24 md:px-8 md:py-14">
+      <main id="top" className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-5 py-2 md:gap-24 md:px-8 md:py-2">
         <section className="hero reveal" aria-labelledby="hero-title">
           <div className="hero__content">
             <p className="eyebrow">Provider of Fire, Life Safety and Security Solutions</p>
