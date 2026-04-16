@@ -67,7 +67,9 @@ a {
 }
 
 .logo-container {
+  margin: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 .nav-link {
