@@ -80,10 +80,10 @@ export default function Home() {
           <a href="#top" className="brand-mark" aria-label="LTL Systems homepage">
             <div className="logo-container">
               <Image
-                src="/ltl-logo-full.png"
+                src="/Untitled design-12.png"
                 alt="LTL Systems Logo"
-                width={200}
-                height={91}
+                width={220}
+                height={73}
                 priority
               />
             </div>
