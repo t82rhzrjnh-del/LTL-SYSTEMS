@@ -43,33 +43,48 @@ a {
 }
 
 .site-header {
-  background: rgb(255 255 255 / 94%);
+  background: rgb(255 255 255 / 97%);
   border-bottom: 1px solid var(--corp-border);
-  backdrop-filter: blur(8px);
-  line-height: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 .brand-mark {
-  align-items: center;
   display: flex;
+  align-items: center;
   gap: 0;
-  line-height: 0;
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .brand-mark img {
   display: block;
+  width: 45px;
   height: auto;
   margin: 0;
   padding: 0;
-  width: 200px;
 }
 
 .logo-container {
+  display: flex;
+  align-items: center;
   margin: 0;
-  overflow: hidden;
   padding: 0;
+  height: 100%;
 }
 
 .nav-link {
