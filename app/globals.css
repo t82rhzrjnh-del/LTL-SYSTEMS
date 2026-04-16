@@ -420,6 +420,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 .service-card li {
@@ -450,7 +451,7 @@ a {
   display: none;
 }
 
-.service-item__title::before {
+.service-item__title::after {
   background: var(--corp-blue);
   border-radius: 4px;
   color: #fff;
@@ -464,7 +465,7 @@ a {
   transition: background 200ms ease;
 }
 
-.service-item[open] .service-item__title::before {
+.service-item[open] .service-item__title::after {
   content: "−";
 }
 
