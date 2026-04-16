@@ -71,10 +71,6 @@ const electronicSecurityServices = [
     title: "Maintenance and Service",
     summary: "Planned and reactive maintenance delivered to SSAIB-aligned standards with 24-hour emergency support.",
   },
-  {
-    title: "Recording and Viewing Equipment",
-    summary: "Integrated storage, retrieval, and viewing infrastructure for dependable evidence capture and operations.",
-  },
 ];
 
 const maintenanceHighlights = [
@@ -121,19 +117,26 @@ export default function Home() {
               <a className="btn" href="/projects">
                 View Project Portfolio
               </a>
-              <a className="btn btn--ghost" href="#contact">
+              <a className="btn btn--primary" href="#contact">
                 Arrange a Consultation
               </a>
             </div>
           </div>
-          <aside className="trust-panel" aria-label="Accreditations and trust markers">
-            <h2>Accreditations and Partnerships</h2>
-            <ul>
-              {accreditations.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p>Service provision available 24/7, 365 days a year.</p>
+          <aside className="trust-panel" aria-label="Key service stats">
+            <dl className="stat-grid">
+              <div className="stat-item">
+                <dt className="stat-item__value">24/7/365</dt>
+                <dd className="stat-item__label">Service Response Capability</dd>
+              </div>
+              <div className="stat-item">
+                <dt className="stat-item__value">ARC</dt>
+                <dd className="stat-item__label">Remote Monitoring Support</dd>
+              </div>
+              <div className="stat-item stat-item--wide">
+                <dt className="stat-item__value">End-to-End</dt>
+                <dd className="stat-item__label">Design, Delivery, Maintenance</dd>
+              </div>
+            </dl>
           </aside>
         </section>
 
@@ -155,25 +158,6 @@ export default function Home() {
               className="accreditation-strip"
               aria-hidden="true"
             />
-          </div>
-        </section>
-
-        <section className="kpi-strip reveal reveal--delay-1" aria-label="Operational highlights">
-          <div>
-            <strong>24/7</strong>
-            <span>Service Response Capability</span>
-          </div>
-          <div>
-            <strong>365</strong>
-            <span>Days Annual Coverage</span>
-          </div>
-          <div>
-            <strong>ARC</strong>
-            <span>Remote Monitoring Support</span>
-          </div>
-          <div>
-            <strong>End-to-End</strong>
-            <span>Design, Delivery, Maintenance</span>
           </div>
         </section>
 
@@ -226,7 +210,10 @@ export default function Home() {
                 {fireLifeSafetyServices.map((item) => (
                   <li key={item.title}>
                     <details className="service-item">
-                      <summary className="service-item__title">{item.title}</summary>
+                      <summary className="service-item__title">
+                        <span>{item.title}</span>
+                        <span className="service-item__icon" aria-hidden="true"></span>
+                      </summary>
                       <span className="service-item__summary">{item.summary}</span>
                     </details>
                   </li>
@@ -239,7 +226,10 @@ export default function Home() {
                 {electronicSecurityServices.map((item) => (
                   <li key={item.title}>
                     <details className="service-item">
-                      <summary className="service-item__title">{item.title}</summary>
+                      <summary className="service-item__title">
+                        <span>{item.title}</span>
+                        <span className="service-item__icon" aria-hidden="true"></span>
+                      </summary>
                       <span className="service-item__summary">{item.summary}</span>
                     </details>
                   </li>

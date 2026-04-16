@@ -2,46 +2,41 @@ import SiteHeader from "../components/SiteHeader";
 
 const projects = [
   {
-    title: "Multi-Site Fire Alarm Upgrade",
-    sector: "Commercial Offices",
-    scope: "End-to-end design, phased install, and ongoing planned maintenance.",
-  },
-  {
-    title: "Integrated Security Deployment",
-    sector: "Industrial Facilities",
-    scope: "Access control, CCTV, intruder alarms, and remote monitoring integration.",
-  },
-  {
-    title: "Education Campus Life Safety",
-    sector: "Education",
-    scope: "Voice alarm, emergency communication, and compliance-focused service support.",
-  },
-  {
-    title: "Healthcare Critical Systems",
+    title: "NHS",
     sector: "Healthcare",
-    scope: "Resilient fire and life safety systems designed for continuous operation.",
+    scope: "Project details to be added.",
+    imagePlaceholder: "NHS image area",
   },
   {
-    title: "Public Sector Security Programme",
-    sector: "Public Sector",
-    scope: "Cross-site rollout of detection, monitoring, and controlled access systems.",
+    title: "Newcastle International Airport",
+    sector: "Aviation",
+    scope: "Project details to be added.",
+    imagePlaceholder: "Newcastle airport image area",
   },
   {
-    title: "Retail Estate Monitoring",
-    sector: "Retail",
-    scope: "Portfolio-wide CCTV and alarm management with 24/7 support response.",
+    title: "Mandarin Oriental Canouan",
+    sector: "Hospitality",
+    scope: "Project details to be added.",
+    imagePlaceholder: "Mandarin Oriental Canouan image area",
   },
-];
-
-const sectors = [
-  "Commercial Offices",
-  "Industrial Facilities",
-  "Education",
-  "Healthcare",
-  "Residential and Multi-site",
-  "Public Sector",
-  "Retail",
-  "Data and Critical Infrastructure",
+  {
+    title: "Komatsu UK",
+    sector: "Industrial",
+    scope: "Project details to be added.",
+    imagePlaceholder: "Komatsu UK image area",
+  },
+  {
+    title: "Northumbria University",
+    sector: "Education",
+    scope: "Project details to be added.",
+    imagePlaceholder: "Northumbria University image area",
+  },
+  {
+    title: "Robert McAlpine",
+    sector: "Construction",
+    scope: "Project details to be added.",
+    imagePlaceholder: "Robert McAlpine image area",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -76,28 +71,24 @@ export default function ProjectsPage() {
           <h2 id="featured-title" className="section-title">
             Recent delivery examples
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
-              <article key={project.title} className="service-card">
+              <article key={project.title} className="service-card p-4">
                 <h3>{project.title}</h3>
-                <p className="text-[var(--accent)] font-semibold mb-3">{project.sector}</p>
-                <p className="text-[var(--ink-soft)] leading-7">{project.scope}</p>
+                <p className="mb-3 font-semibold text-[var(--accent)]">{project.sector}</p>
+                <div className="grid gap-4 md:grid-cols-[minmax(14rem,18rem)_1fr] md:items-center">
+                  <div className="flex min-h-40 items-center justify-center rounded-lg border border-[var(--corp-border)] bg-[var(--bg-muted)] px-4 text-center text-sm font-semibold uppercase tracking-[0.06em] text-[var(--ink-soft)]">
+                    {project.imagePlaceholder}
+                  </div>
+                  <div>
+                    <p className="leading-7 text-[var(--ink-soft)]">{project.scope}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section id="sectors" aria-labelledby="project-sectors-title">
-          <p className="eyebrow">Sectors</p>
-          <h2 id="project-sectors-title" className="section-title">
-            Environments we support
-          </h2>
-          <ul className="sector-grid">
-            {sectors.map((sector) => (
-              <li key={sector}>{sector}</li>
-            ))}
-          </ul>
-        </section>
       </main>
 
       <footer className="site-footer">
