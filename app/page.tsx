@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SiteHeader from "./components/SiteHeader";
 
 const fireLifeSafetyServices = [
   "Fire Alarm Systems",
@@ -75,42 +76,14 @@ const accreditations = ["BAFE", "SSAIB", "IFCC SDI19", "Siemens Partnership"];
 export default function Home() {
   return (
     <div className="page-wrap">
-      <header className="site-header sticky top-0 z-20">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-0 md:px-8">
-          <a href="#top" className="brand-mark" aria-label="LTL Systems homepage">
-            <div className="logo-container">
-              <Image
-                src="/Untitled design-12.png"
-                alt="LTL Systems Logo"
-                width={280}
-                height={93}
-                priority
-              />
-            </div>
-          </a>
-          <nav aria-label="Primary navigation" className="hidden gap-6 md:flex">
-            <a className="nav-link" href="#about">
-              About
-            </a>
-            <a className="nav-link" href="#services">
-              Services
-            </a>
-            <a className="nav-link" href="#contact">
-              Contact
-            </a>
-          </nav>
-          <a className="btn btn--sm" href="#contact">
-            Enquire Now
-          </a>
-        </div>
-      </header>
+      <SiteHeader homeHref="#top" />
 
       <main id="top" className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-5 py-8 md:gap-24 md:px-8 md:py-12">
         <section className="hero reveal" aria-labelledby="hero-title">
           <div className="hero__content">
             <p className="eyebrow">Provider of Fire, Life Safety and Security Solutions</p>
             <h1 id="hero-title" className="hero__title">
-              Corporate-grade systems engineering for fire, life safety and electronic security.
+              Integrated systems expertise for fire, life safety and electronic security.
             </h1>
             <p className="hero__copy">
               LTL Systems Limited is an independent, local company with an established reputation for
@@ -120,6 +93,9 @@ export default function Home() {
             <div className="hero__actions">
               <a className="btn" href="#services">
                 View Service Portfolio
+              </a>
+              <a className="btn" href="/projects">
+                View Project Portfolio
               </a>
               <a className="btn btn--ghost" href="#contact">
                 Arrange a Consultation
@@ -135,6 +111,27 @@ export default function Home() {
             </ul>
             <p>Service provision available 24/7, 365 days a year.</p>
           </aside>
+        </section>
+
+        <section className="accreditation-marquee" aria-label="Accreditations and certifications">
+          <div className="accreditation-marquee__track">
+            <Image
+              src="/Screenshot 2026-04-16 at 15.18.39.png"
+              alt="LTL accreditations including BAFE, Gold Partner, SafeContractor, SE Controls, IFC and SSAIB"
+              width={2000}
+              height={310}
+              className="accreditation-strip"
+              priority
+            />
+            <Image
+              src="/Screenshot 2026-04-16 at 15.18.39.png"
+              alt=""
+              width={2000}
+              height={310}
+              className="accreditation-strip"
+              aria-hidden="true"
+            />
+          </div>
         </section>
 
         <section className="kpi-strip reveal reveal--delay-1" aria-label="Operational highlights">
