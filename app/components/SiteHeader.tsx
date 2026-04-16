@@ -41,7 +41,7 @@ const navSections = [
     items: [
       ...fireLifeSafetyServices.map((s) => ({ label: s, href: "/#services" })),
       ...electronicSecurityServices.map((s) => ({ label: s, href: "/#services" })),
-      { label: "Service and Maintenance", href: "/#services" },
+      { label: "Design", href: "/#services" },
     ],
   },
   {
