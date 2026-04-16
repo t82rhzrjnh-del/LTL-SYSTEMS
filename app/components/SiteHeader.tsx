@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 
 const fireLifeSafetyServices = [
   "Fire Alarm Systems",
@@ -26,7 +23,7 @@ const electronicSecurityServices = [
 
 const navSections = [
   {
-    label: "About",
+    label: "About Us",
     href: "/#about",
     items: [
       { label: "Who We Are", href: "/#about" },
@@ -54,7 +51,7 @@ const navSections = [
     ],
   },
   {
-    label: "Contact",
+    label: "Contact Us",
     href: "/#contact",
     items: [
       { label: "Call +44 1670 735275", href: "tel:+441670735275" },
@@ -65,13 +62,6 @@ const navSections = [
 ];
 
 export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openSection, setOpenSection] = useState<string | null>(null);
-
-  const toggleSection = (label: string) => {
-    setOpenSection((prev) => (prev === label ? null : label));
-  };
-
   return (
     <header className="site-header">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-0 md:px-8">
@@ -91,15 +81,12 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
         <nav aria-label="Primary navigation" className="site-nav hidden md:flex">
           {navSections.map((section) => (
             <div key={section.label} className="nav-dropdown">
-              <a
-                className="nav-link nav-link--trigger"
-                href={section.href}
-              >
+              <a className="nav-link nav-link--trigger" href={section.href}>
                 {section.label}
               </a>
               <div className={`nav-dropdown__menu${section.wide ? " nav-dropdown__menu--services" : ""}`}>
                 {section.items.map((item) => (
-                  <a key={item.label} href={item.href}>
+                  <a key={item.label} className="nav-dropdown__item" href={item.href}>
                     {item.label}
                   </a>
                 ))}
@@ -108,56 +95,19 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <a className="btn btn--sm hidden md:inline-flex" href="/#contact">
-            Enquire Now
-          </a>
-
-          <button
-            className="mobile-menu-toggle md:hidden"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            onClick={() => { setMenuOpen((v) => !v); setOpenSection(null); }}
-          >
-            <span className={`hamburger${menuOpen ? " hamburger--open" : ""}`} />
-            <span className="mobile-menu-toggle__label">Menu</span>
-          </button>
-        </div>
+        <a className="btn btn--sm hidden md:inline-flex" href="/#contact">
+          Enquire Now
+        </a>
       </div>
 
-      {/* Mobile drawer */}
-      {menuOpen && (
-        <div className="mobile-drawer" role="dialog" aria-label="Mobile navigation">
-          {navSections.map((section) => (
-            <div key={section.label} className="mobile-section">
-              <button
-                className="mobile-section__trigger"
-                onClick={() => toggleSection(section.label)}
-                aria-expanded={openSection === section.label}
-              >
-                {section.label}
-                <span className={`mobile-chevron${openSection === section.label ? " mobile-chevron--open" : ""}`}>▾</span>
-              </button>
-              {openSection === section.label && (
-                <div className="mobile-section__items">
-                  {section.items.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <a className="btn w-full text-center mt-4" href="/#contact" onClick={() => setMenuOpen(false)}>
-            Enquire Now
+      {/* Mobile quick-nav */}
+      <nav className="mobile-quick-nav md:hidden" aria-label="Mobile quick navigation">
+        {navSections.map((section) => (
+          <a key={section.label} href={section.href} className="mobile-quick-nav__link">
+            {section.label}
           </a>
-        </div>
-      )}
+        ))}
+      </nav>
     </header>
   );
 }
