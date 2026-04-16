@@ -31,6 +31,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), "Manrope", sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -40,6 +41,7 @@ a {
 
 .page-wrap {
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 .site-header {
@@ -59,6 +61,7 @@ a {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  min-width: 0;
   width: 100%;
 }
 
@@ -67,6 +70,7 @@ a {
   align-items: center;
   gap: 0;
   margin: 0;
+  min-width: 0;
   padding: 0;
   flex-shrink: 0;
 }
@@ -649,6 +653,14 @@ a {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    height: 76px;
+  }
+
+  .brand-mark img {
+    width: min(220px, 58vw) !important;
+  }
+
   .hero {
     border-radius: 0.8rem;
     padding: 1.35rem;
@@ -656,6 +668,14 @@ a {
 
   .section-title {
     max-width: 100%;
+  }
+
+  .mobile-drawer {
+    top: 76px;
+  }
+
+  .accreditation-strip {
+    height: clamp(3.9rem, 11vw, 5.6rem);
   }
 }
 
