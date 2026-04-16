@@ -78,13 +78,15 @@ export default function Home() {
       <header className="site-header sticky top-0 z-20">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-0 md:px-8">
           <a href="#top" className="brand-mark" aria-label="LTL Systems homepage">
-            <Image
-              src="/ltl-logo-full.png"
-              alt="LTL Systems Logo"
-              width={200}
-              height={91}
-              priority
-            />
+            <div className="logo-container">
+              <Image
+                src="/ltl-logo-full.png"
+                alt="LTL Systems Logo"
+                width={200}
+                height={91}
+                priority
+              />
+            </div>
           </a>
           <nav aria-label="Primary navigation" className="hidden gap-6 md:flex">
             <a className="nav-link" href="#about">

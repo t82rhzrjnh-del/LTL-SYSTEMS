@@ -66,6 +66,10 @@ a {
   width: 200px;
 }
 
+.logo-container {
+  overflow: hidden;
+}
+
 .nav-link {
   color: var(--ink-soft);
   font-size: 0.92rem;
