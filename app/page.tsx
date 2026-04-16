@@ -225,8 +225,10 @@ export default function Home() {
               <ul>
                 {fireLifeSafetyServices.map((item) => (
                   <li key={item.title}>
-                    <strong className="service-item__title">{item.title}</strong>
-                    <span className="service-item__summary">{item.summary}</span>
+                    <details className="service-item">
+                      <summary className="service-item__title">{item.title}</summary>
+                      <span className="service-item__summary">{item.summary}</span>
+                    </details>
                   </li>
                 ))}
               </ul>
@@ -236,8 +238,10 @@ export default function Home() {
               <ul>
                 {electronicSecurityServices.map((item) => (
                   <li key={item.title}>
-                    <strong className="service-item__title">{item.title}</strong>
-                    <span className="service-item__summary">{item.summary}</span>
+                    <details className="service-item">
+                      <summary className="service-item__title">{item.title}</summary>
+                      <span className="service-item__summary">{item.summary}</span>
+                    </details>
                   </li>
                 ))}
               </ul>
