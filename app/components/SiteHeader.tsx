@@ -83,7 +83,7 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
         </a>
 
         {/* Desktop nav */}
-        <nav aria-label="Primary navigation" className="site-nav hidden md:flex">
+        <nav aria-label="Primary navigation" className="site-nav">
           {navSections.map((section) => (
             <div key={section.label} className="nav-dropdown">
               <a className="nav-link nav-link--trigger" href={section.href}>
@@ -100,13 +100,13 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
           ))}
         </nav>
 
-        <a className="btn btn--sm hidden md:inline-flex" href="/#contact">
+        <a className="btn btn--sm enquire-now-btn" href="/#contact">
           Enquire Now
         </a>
 
         {/* Mobile hamburger */}
         <button
-          className="mobile-hamburger md:hidden"
+          className="mobile-hamburger"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

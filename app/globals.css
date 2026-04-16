@@ -664,6 +664,10 @@ a {
     display: flex;
   }
 
+  .enquire-now-btn {
+    display: none;
+  }
+
   .brand-mark img {
     width: min(220px, 58vw) !important;
   }
@@ -779,6 +783,10 @@ a {
   flex-direction: column;
   gap: 5px;
   padding: 0.5rem;
+}
+
+.enquire-now-btn {
+  display: inline-flex;
 }
 
 .ham-bar {
