@@ -139,7 +139,6 @@ a {
 
 .site-nav {
   align-items: center;
-  display: flex;
   gap: 1.1rem;
 }
 
@@ -657,8 +656,25 @@ a {
     height: 76px;
   }
 
+  .site-nav {
+    display: none;
+  }
+
   .brand-mark img {
     width: min(220px, 58vw) !important;
+  }
+
+  .mobile-menu-toggle {
+    align-items: center;
+    background: var(--bg-panel);
+    border: 1px solid var(--corp-border);
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.6rem;
+    height: 2.7rem;
+    padding: 0 0.85rem;
+    white-space: nowrap;
   }
 
   .hero {
@@ -696,16 +712,7 @@ a {
 /* ── Mobile menu ───────────────────────────────────── */
 
 .mobile-menu-toggle {
-  align-items: center;
-  background: var(--bg-panel);
-  border: 1px solid var(--corp-border);
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-flex;
-  gap: 0.6rem;
-  height: 2.7rem;
-  padding: 0 0.85rem;
-  white-space: nowrap;
+  display: none;
 }
 
 .hamburger,
