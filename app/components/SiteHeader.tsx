@@ -113,7 +113,6 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
             Enquire Now
           </a>
 
-          {/* Hamburger */}
           <button
             className="mobile-menu-toggle md:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -121,6 +120,7 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
             onClick={() => { setMenuOpen((v) => !v); setOpenSection(null); }}
           >
             <span className={`hamburger${menuOpen ? " hamburger--open" : ""}`} />
+            <span className="mobile-menu-toggle__label">Menu</span>
           </button>
         </div>
       </div>

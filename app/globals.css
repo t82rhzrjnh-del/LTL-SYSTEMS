@@ -674,8 +674,12 @@ a {
     top: 76px;
   }
 
+  .accreditation-marquee {
+    padding: 1.35rem 0 1rem;
+  }
+
   .accreditation-strip {
-    height: clamp(3.9rem, 11vw, 5.6rem);
+    height: clamp(4.2rem, 12vw, 5.9rem);
   }
 }
 
@@ -692,23 +696,27 @@ a {
 /* ── Mobile menu ───────────────────────────────────── */
 
 .mobile-menu-toggle {
-  background: none;
-  border: none;
+  align-items: center;
+  background: var(--bg-panel);
+  border: 1px solid var(--corp-border);
+  border-radius: 999px;
   cursor: pointer;
-  height: 2.2rem;
-  padding: 0.3rem;
-  width: 2.2rem;
+  display: inline-flex;
+  gap: 0.6rem;
+  height: 2.7rem;
+  padding: 0 0.85rem;
+  white-space: nowrap;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--ink);
+  background: var(--corp-blue);
   border-radius: 2px;
   display: block;
-  height: 2px;
+  height: 2.5px;
   transition: transform 240ms ease, opacity 240ms ease;
-  width: 1.5rem;
+  width: 1.2rem;
 }
 
 .hamburger {
@@ -727,6 +735,14 @@ a {
 
 .hamburger::after {
   top: 5px;
+}
+
+.mobile-menu-toggle__label {
+  color: var(--corp-blue-deep);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hamburger--open {
@@ -756,7 +772,7 @@ a {
   padding: 1rem;
   position: fixed;
   right: 0;
-  top: 90px;
+  top: 76px;
   z-index: 30;
 }
 
