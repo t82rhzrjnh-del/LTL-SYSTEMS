@@ -781,9 +781,14 @@ a {
   padding: 0.5rem;
 }
 
-.ham-bar,
-.ham-bar::before,
-.ham-bar::after {
+.ham-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 22px;
+}
+
+.ham-bar span {
   background: var(--corp-blue-deep);
   border-radius: 2px;
   display: block;
@@ -792,23 +797,9 @@ a {
   width: 22px;
 }
 
-.ham-bar {
-  position: relative;
-}
-
-.ham-bar::before,
-.ham-bar::after {
-  content: "";
-  left: 0;
-  position: absolute;
-}
-
-.ham-bar::before { top: -7px; }
-.ham-bar::after  { top: 7px; }
-
-.ham-bar--open { background: transparent; }
-.ham-bar--open::before { transform: translateY(7px) rotate(45deg); }
-.ham-bar--open::after  { transform: translateY(-7px) rotate(-45deg); }
+.ham-bar--open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.ham-bar--open span:nth-child(2) { opacity: 0; }
+.ham-bar--open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
 .mobile-drawer {
   background: #fff;

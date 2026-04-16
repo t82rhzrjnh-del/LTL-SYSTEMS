@@ -111,7 +111,9 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={`ham-bar${open ? " ham-bar--open" : ""}`} />
+          <span className={`ham-bar${open ? " ham-bar--open" : ""}`}>
+            <span /><span /><span />
+          </span>
         </button>
       </div>
 
