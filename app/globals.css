@@ -735,7 +735,11 @@ a {
   display: none;
   flex-direction: column;
   gap: 5px;
-  padding: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.625rem;
+  position: relative;
+  z-index: 31;
 }
 
 .enquire-now-btn {
@@ -767,8 +771,46 @@ a {
   border-top: 1px solid var(--corp-border);
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.5rem 1.5rem;
-  gap: 0.25rem;
+  gap: 0.35rem;
+  padding: 1rem 1.25rem 1.35rem;
+  position: relative;
+  transform-origin: top center;
+  animation: mobileDrawerIn 220ms ease-out both;
+  z-index: 30;
+}
+
+.mobile-drawer-backdrop {
+  background: rgb(17 24 39 / 24%);
+  border: 0;
+  cursor: pointer;
+  display: none;
+  inset: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 29;
+  animation: mobileBackdropIn 180ms ease-out both;
+}
+
+@keyframes mobileDrawerIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes mobileBackdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .mobile-drawer__link {
@@ -776,7 +818,8 @@ a {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  padding: 0.75rem 0;
+  min-height: 52px;
+  padding: 0.9rem 0;
   border-bottom: 1px solid var(--corp-border);
   text-transform: uppercase;
 }
@@ -786,7 +829,8 @@ a {
 }
 
 .mobile-drawer__cta {
-  margin-top: 1rem;
+  margin-top: 1.05rem;
+  min-height: 48px;
   text-align: center;
   width: 100%;
 }
@@ -806,5 +850,9 @@ a {
 
   .mobile-hamburger {
     display: flex;
+  }
+
+  .mobile-drawer-backdrop {
+    display: block;
   }
 }

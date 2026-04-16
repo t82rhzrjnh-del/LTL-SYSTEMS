@@ -119,21 +119,28 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
 
       {/* Mobile drawer */}
       {open && (
-        <nav className="mobile-drawer" aria-label="Mobile navigation">
-          {navSections.map((section) => (
-            <a
-              key={section.label}
-              href={section.href}
-              className="mobile-drawer__link"
-              onClick={() => setOpen(false)}
-            >
-              {section.label}
+        <>
+          <button
+            className="mobile-drawer-backdrop"
+            aria-label="Close navigation menu"
+            onClick={() => setOpen(false)}
+          />
+          <nav className="mobile-drawer" aria-label="Mobile navigation">
+            {navSections.map((section) => (
+              <a
+                key={section.label}
+                href={section.href}
+                className="mobile-drawer__link"
+                onClick={() => setOpen(false)}
+              >
+                {section.label}
+              </a>
+            ))}
+            <a className="btn mobile-drawer__cta" href="/#contact" onClick={() => setOpen(false)}>
+              Enquire Now
             </a>
-          ))}
-          <a className="btn mobile-drawer__cta" href="/#contact" onClick={() => setOpen(false)}>
-            Enquire Now
-          </a>
-        </nav>
+          </nav>
+        </>
       )}
     </header>
   );
