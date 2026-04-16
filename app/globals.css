@@ -48,7 +48,7 @@ a {
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 90px;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -73,8 +73,9 @@ a {
 
 .brand-mark img {
   display: block;
-  width: 220px;
-  height: auto;
+  width: 280px !important;
+  height: auto !important;
+  max-height: none !important;
   margin: 0;
   padding: 0;
 }
@@ -84,7 +85,6 @@ a {
   align-items: center;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 .nav-link {

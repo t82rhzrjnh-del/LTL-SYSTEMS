@@ -82,8 +82,8 @@ export default function Home() {
               <Image
                 src="/Untitled design-12.png"
                 alt="LTL Systems Logo"
-                width={220}
-                height={73}
+                width={280}
+                height={93}
                 priority
               />
             </div>
