@@ -2,13 +2,34 @@ import Image from "next/image";
 import SiteHeader from "./components/SiteHeader";
 
 const fireLifeSafetyServices = [
-  "Fire Alarm Systems",
-  "Smoke Ventilation Systems",
-  "Emergency Voice Communications Systems",
-  "Voice Alarm & Public Address Systems",
-  "Suppression Systems",
-  "Smoke & Fire Dampers",
-  "Fire Extinguishers",
+  {
+    title: "Fire Alarm Systems",
+    summary: "Addressable detection and control solutions designed for early warning, compliance, and reduced nuisance alarms.",
+  },
+  {
+    title: "Smoke Ventilation Systems",
+    summary: "Natural and mechanical smoke control systems that protect escape routes and support safer evacuation.",
+  },
+  {
+    title: "Emergency Voice Communications Systems",
+    summary: "Two-way monitored communication systems to support disabled refuge points and fire team coordination.",
+  },
+  {
+    title: "Voice Alarm & Public Address Systems",
+    summary: "Clear live and pre-recorded announcements that improve evacuation response and day-to-day communications.",
+  },
+  {
+    title: "Suppression Systems",
+    summary: "Gas suppression solutions tailored to hazards, designed to limit damage while protecting people and assets.",
+  },
+  {
+    title: "Smoke & Fire Dampers",
+    summary: "Critical passive fire components with planned testing and maintenance to help prevent fire and smoke spread.",
+  },
+  {
+    title: "Fire Extinguishers",
+    summary: "Extinguisher coverage integrated into site fire strategy with support for ongoing servicing and compliance.",
+  },
 ];
 
 const lifeSafetySystemsLinks = [
@@ -43,14 +64,38 @@ const lifeSafetySystemsLinks = [
 ];
 
 const electronicSecurityServices = [
-  "Intruder Alarm Systems",
-  "CCTV Systems",
-  "Access Control Systems",
-  "Door Entry Intercom Systems",
-  "Emergency Call Systems",
-  "Remote Monitoring",
-  "Maintenance and Service",
-  "Recording and Viewing Equipment",
+  {
+    title: "Intruder Alarm Systems",
+    summary: "Individually designed wired and wireless alarm systems for sites ranging from single units to large facilities.",
+  },
+  {
+    title: "CCTV Systems",
+    summary: "HD and IP camera platforms with remote access, analytics, and flexible local or cloud recording options.",
+  },
+  {
+    title: "Access Control Systems",
+    summary: "Scalable access solutions that control who can enter and when across doors, buildings, and multi-site estates.",
+  },
+  {
+    title: "Door Entry Intercom Systems",
+    summary: "Audio, video, wireless, and GSM intercom options for residential and commercial entry management.",
+  },
+  {
+    title: "Emergency Call Systems",
+    summary: "Designed, installed, and maintained emergency call systems with commissioning support across environments.",
+  },
+  {
+    title: "Remote Monitoring",
+    summary: "24/7 monitoring with verified signal handling and escalation through a dedicated alarm receiving centre.",
+  },
+  {
+    title: "Maintenance and Service",
+    summary: "Planned and reactive maintenance delivered to SSAIB-aligned standards with 24-hour emergency support.",
+  },
+  {
+    title: "Recording and Viewing Equipment",
+    summary: "Integrated storage, retrieval, and viewing infrastructure for dependable evidence capture and operations.",
+  },
 ];
 
 const maintenanceHighlights = [
@@ -200,7 +245,10 @@ export default function Home() {
               <h3 id="fire-title">Fire & Life Safety Systems</h3>
               <ul>
                 {fireLifeSafetyServices.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item.title}>
+                    <strong className="service-item__title">{item.title}</strong>
+                    <span className="service-item__summary">{item.summary}</span>
+                  </li>
                 ))}
               </ul>
             </article>
@@ -208,7 +256,10 @@ export default function Home() {
               <h3 id="security-title">Electronic Security Systems</h3>
               <ul>
                 {electronicSecurityServices.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item.title}>
+                    <strong className="service-item__title">{item.title}</strong>
+                    <span className="service-item__summary">{item.summary}</span>
+                  </li>
                 ))}
               </ul>
             </article>

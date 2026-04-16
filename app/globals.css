@@ -430,6 +430,21 @@ a {
   position: relative;
 }
 
+.service-item__title {
+  color: var(--corp-blue-deep);
+  display: block;
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.service-item__summary {
+  color: var(--ink-soft);
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-top: 0.2rem;
+}
+
 .service-card li::before {
   content: "";
   width: 0.44rem;
