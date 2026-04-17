@@ -1,41 +1,42 @@
 import SiteHeader from "../components/SiteHeader";
+import Image from "next/image";
 
 const projects = [
   {
     title: "NHS",
     sector: "Healthcare",
     scope: "Project details to be added.",
-    imagePlaceholder: "NHS image area",
+    image: "/Screenshot 2026-04-17 at 19.35.18.jpg",
   },
   {
     title: "Newcastle International Airport",
     sector: "Aviation",
     scope: "Project details to be added.",
-    imagePlaceholder: "Newcastle airport image area",
+    image: "/Screenshot 2026-04-17 at 19.39.35.jpg",
   },
   {
     title: "Mandarin Oriental Canouan",
     sector: "Hospitality",
     scope: "Project details to be added.",
-    imagePlaceholder: "Mandarin Oriental Canouan image area",
+    image: "/Screenshot 2026-04-17 at 19.51.35.jpg",
   },
   {
     title: "Komatsu UK",
     sector: "Industrial",
     scope: "Project details to be added.",
-    imagePlaceholder: "Komatsu UK image area",
+    image: "/Screenshot 2026-04-17 at 19.40.34.jpg",
   },
   {
     title: "Northumbria University",
     sector: "Education",
     scope: "Project details to be added.",
-    imagePlaceholder: "Northumbria University image area",
+    image: "/Screenshot 2026-04-17 at 19.41.50.jpg",
   },
   {
-    title: "Robertsons",
-    sector: "Construction",
+    title: "Sage",
+    sector: "Commercial",
     scope: "Project details to be added.",
-    imagePlaceholder: "Robertsons image area",
+    image: "/Screenshot 2026-04-17 at 19.42.59.jpg",
   },
 ];
 
@@ -77,8 +78,14 @@ export default function ProjectsPage() {
                 <h3>{project.title}</h3>
                 <p className="mb-3 font-semibold text-[var(--accent)]">{project.sector}</p>
                 <div className="grid gap-4 md:grid-cols-[minmax(14rem,18rem)_1fr] md:items-center">
-                  <div className="flex min-h-40 items-center justify-center rounded-lg border border-[var(--corp-border)] bg-[var(--bg-muted)] px-4 text-center text-sm font-semibold uppercase tracking-[0.06em] text-[var(--ink-soft)]">
-                    {project.imagePlaceholder}
+                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[var(--bg-muted)] flex items-center justify-center">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-contain p-2"
+                      priority
+                    />
                   </div>
                   <div>
                     <p className="leading-7 text-[var(--ink-soft)]">{project.scope}</p>
