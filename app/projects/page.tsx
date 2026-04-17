@@ -73,7 +73,7 @@ export default function ProjectsPage() {
             Recent delivery examples
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {projects.map((project) => (
+            {projects.map((project, idx) => (
               <article key={project.title} className="service-card p-4">
                 <h3>{project.title}</h3>
                 <p className="mb-3 font-semibold text-[var(--accent)]">{project.sector}</p>
@@ -82,9 +82,10 @@ export default function ProjectsPage() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="object-contain p-2"
-                      priority
+                      width={300}
+                      height={160}
+                      className="object-contain p-2 h-auto w-auto"
+                      priority={idx === 0}
                     />
                   </div>
                   <div>

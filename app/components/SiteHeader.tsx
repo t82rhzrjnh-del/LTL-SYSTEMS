@@ -73,7 +73,7 @@ export default function SiteHeader({ homeHref = "/" }: { homeHref?: string }) {
         <a href={homeHref} className="brand-mark" aria-label="LTL Systems homepage">
           <div className="logo-container">
             <Image
-              src="/Untitled design-12.png"
+              src="/ltl-logo-full.png"
               alt="LTL Systems Logo"
               width={280}
               height={93}
