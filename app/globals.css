@@ -88,6 +88,10 @@ a {
   .brand-mark img {
     width: 180px !important;
   }
+
+  .hero::before {
+    display: none;
+  }
 }
 
 .logo-container {
@@ -760,7 +764,25 @@ a {
 
   .hero {
     border-radius: 0.8rem;
-    padding: 1.35rem;
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .hero__copy {
+    font-size: 0.9rem;
+  }
+
+  .hero__actions {
+    flex-wrap: wrap;
+  }
+
+  .hero__actions .btn {
+    font-size: 0.75rem;
+    padding: 0.65rem 0.6rem;
   }
 
   .section-title {
