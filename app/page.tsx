@@ -342,8 +342,8 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-8 text-sm md:flex-row md:items-center md:justify-between md:px-8">
           <p>© 2026 LTL Systems. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
-            <a href="/#services">Services</a>
-            <a href="/#contact">Contact</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
           </div>
         </div>
       </footer>

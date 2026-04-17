@@ -104,7 +104,8 @@ export default function ProjectsPage() {
           <p>© 2026 LTL Systems. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
             <a href="/">Back to Home</a>
-            <a href="mailto:sales@ltlsystems.co.uk">Contact</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
           </div>
         </div>
       </footer>
