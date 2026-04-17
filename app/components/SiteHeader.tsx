@@ -57,7 +57,7 @@ const navSections = [
     label: "Contact Us",
     href: "/#contact",
     items: [
-      { label: "Call +44 1670 735275", href: "tel:+441670735275" },
+      { label: "Call 01670 735275", href: "tel:01670735275" },
       { label: "Email Sales Team", href: "mailto:sales@ltlsystems.co.uk" },
       { label: "Visit Head Office", href: "/#contact" },
     ],

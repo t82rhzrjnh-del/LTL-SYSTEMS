@@ -307,7 +307,7 @@ export default function Home() {
             </p>
             <div className="hero__actions">
               <a className="btn" href="tel:+441670735275">
-                Call +44 1670 735275
+                Call 01670 735275
               </a>
               <a className="btn btn--ghost" href="mailto:sales@ltlsystems.co.uk">
                 Email Sales Team
@@ -317,7 +317,7 @@ export default function Home() {
           <div className="contact__panel" role="group" aria-label="Contact details">
             <h3>Contact Us</h3>
             <p>
-              <a href="tel:+441670735275">+44 1670 735275</a>
+              <a href="tel:01670735275">01670 735275</a>
             </p>
             <p>
               <a href="mailto:sales@ltlsystems.co.uk">sales@ltlsystems.co.uk</a>

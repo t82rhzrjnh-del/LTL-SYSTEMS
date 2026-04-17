@@ -32,10 +32,10 @@ const projects = [
     imagePlaceholder: "Northumbria University image area",
   },
   {
-    title: "Robert McAlpine",
+    title: "Robertsons",
     sector: "Construction",
     scope: "Project details to be added.",
-    imagePlaceholder: "Robert McAlpine image area",
+    imagePlaceholder: "Robertsons image area",
   },
 ];
 
